@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;  /* 페이지 상단에서 시작 */
+    justify-content: center;
+    overflow-y: auto;  /* 세로 스크롤이 가능하게 함 */
+}
+
+/* Navigation styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("https://raw.githubusercontent.com/hansei-ssr/hansei-ssr.github.io/refs/heads/main/favicon-32x32.png");
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7b7b7b;
+}
+
+/* Main content styles */
+main {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-container {
+    position: relative;
+    width: 100%;
+    max-width: 56rem;
+    padding: 0 1rem;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.text-row {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition: all 0.5s ease-out;
+    margin: 1rem 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.text-item {
+    display: inline-block;
+    font-size: 2.25rem;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Page transition effect */
+#page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+/* Particle effect */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .text-item {
+        font-size: 3rem;
+    }
+}
+
+/* Content section styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+/* Custom underline style */
+.my-underline {
+    text-decoration: underline;
+}
+
+/* 나눔스퀘어 폰트만 적용 */
+body {
+    font-family: 'Nanum Square', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 다른 부분의 스타일을 유지 */
+h2, ul, li {
+    font-family: 'Nanum Square', sans-serif;
+}
+
+/* 폰트 스타일 적용 안 되는 부분에 대한 설정 */
+nav, a, p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
